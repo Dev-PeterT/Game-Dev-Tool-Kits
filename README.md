@@ -35,6 +35,9 @@ Unity will automatically import the scripts and make the tools available in your
 using CustomAttributes;
 ```
 
+>**Note:** Some Game Mechanics scripts depend on shared utility functions found in the main Game-Mechanics folder.
+Be sure to also include the GameMechanicUtility.cs file located in the root of the Game-Mechanics directory when copying individual game mechanic subfolders.
+
 Unity will automatically import the scripts and make the tools available in your project.
 
 ## Table of Contents
