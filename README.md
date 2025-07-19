@@ -30,7 +30,10 @@ To use any of the tools or game mechanic scripts in this repository, simply:
 
 Unity will automatically import the scripts and make the tools available in your project.
 
->**Note:** The Custom-Attributes folder should be included as a whole due to shared dependencies between editor extensions and utilities.
+>**Note:** The Custom-Attributes folder should be included as a whole due to shared dependencies between editor extensions and utilities. To use the custom attributes in your own scripts, you’ll need to add:
+```csharp
+using CustomAttributes;
+```
 
 Unity will automatically import the scripts and make the tools available in your project.
 
