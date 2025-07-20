@@ -41,3 +41,7 @@ Be sure to also include the GameMechanicUtility.cs file located in the root of t
 Unity will automatically import the scripts and make the tools available in your project.
 
 ## Table of Contents
+- [Custom Attributes](<./Custom-Attributes>)
+- [Game Mechanics](<./Game Mechanics>)
+	- [Guided Projectile](<./Guided Projectile>)
+	- [Gravity Manipulator](<./Gravity Manipulator>)
