@@ -43,5 +43,5 @@ Unity will automatically import the scripts and make the tools available in your
 ## Table of Contents
 - [Custom Attributes](<./Custom-Attributes>)
 - [Game Mechanics](<./Game Mechanics>)
-	- [Guided Projectile](<./Guided Projectile>)
-	- [Gravity Manipulator](<./Gravity Manipulator>)
+	- [Guided Projectile](<./Game Mechanics/Guided Projectile>)
+	- [Gravity Manipulator](<./Game Mechanics/Gravity Manipulator>)
