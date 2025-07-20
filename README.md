@@ -17,7 +17,7 @@ This toolkit provides a solid starting point that emphasizes scalability, clarit
 Compatible with **Unity 6.0 or newer**
 
 ## Dependencies
-All of the **Game Mechanics** scripts depend on the utilities and attributes found in the **Custom Attributes** folder. If you're using any scripts from the **Game-Mechanics** folder, make sure to also include the **Custom-Attributes** folder in your project.
+Some of the **Game Mechanics** scripts depend on the utilities and attributes found in the **Custom Attributes** folder. If you're using any scripts from the **Game-Mechanics** folder, make sure to also include the **Custom-Attributes** folder in your project.
 
 >:warning: **Note:** Deleting or omitting the **Custom-Attributes** folder will cause the scripts to throw errors. If you want to use the **Game Mechanics** scripts **without** including **Custom-Attributes**, you must remove all custom attributes (non-native Unity attributes) from the scripts and delete any `using CustomAttributes;` statements to prevent compilation errors.
 
