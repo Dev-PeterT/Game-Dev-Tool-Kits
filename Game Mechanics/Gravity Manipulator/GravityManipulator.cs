@@ -3,6 +3,13 @@ using CustomAttributes;
 using ModularUnityScripts;
 
 /// <summary>
+/// Specifies the type of gravity applied to objects.<br/>
+/// <b>- Spherical:</b> Gravity pulls objects towards a central point (e.g., a planet).<br/>
+/// <b>- Directional:</b> Gravity applies in a fixed direction, such as downwards.
+/// </summary>
+public enum GravityType { Spherical, Directional }
+
+/// <summary>
 /// <para>
 /// Simulates customizable gravity behavior for game objects in both 2D and 3D Unity environments.<br/>
 /// Supports both directional gravity (e.g., downward like Earth's gravity) and spherical gravity (e.g., radial pull toward a planet-like center).<br/>
