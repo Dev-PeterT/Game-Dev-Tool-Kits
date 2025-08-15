@@ -45,3 +45,4 @@ Unity will automatically import the scripts and make the tools available in your
 - [Game Mechanics](<./Game Mechanics>)
 	- [Guided Projectile](<./Game Mechanics/Guided Projectile>)
 	- [Gravity Manipulator](<./Game Mechanics/Gravity Manipulator>)
+	- [Time Manager](<./Game Mechanics/Time Manager>)
