@@ -20,30 +20,31 @@
   - Inspect final formatted timer text.
 
 ## Dependencies
-This script uses my `CustomAttributes` library for enhanced inspector features such as `[ReadOnly]`, `[MinValue]`, `[EnumFlags]`, `[ShowIf]`, and `[LineDivider]`.
+This script only uses my `CustomAttributes` library.
 
 ## Usage
 
 ### 1. Attach the Script
-Attach `TimeManager` to any GameObject in your scene to manage both global time scale and in-game timer functionality.
-
-### 2. Configure Timer in Inspector
-- Choose **Timer Mode** (`CountUp` or `CountDown`).
-- Set **Time Limit** (only for countdown mode).
-- Enable **Timer Text** and assign a `TMP_Text` component if you want UI display.
-- Select **Timer Precision** flags for the desired units.
-
-### 3. Control the Timer in Code
+Inherit the Class, alternatively you can attach TimeManager to any GameObject in your scene to manage both global time scale and in-game timer functionality.
 ```csharp
-// Change timer mode and optionally pause on reset
-timeManager.ChangeTimerFunction_CountUp(true);
-timeManager.ChangeTimerFunction_CountDown(60f, true);
+	public class MyClass : TimeManager {
+		... Your Code
+	}
+```
 
-// Adjust the time limit dynamically
-timeManager.AdjustTimeLimit(10f);
+### 2. Call the necessary functions in Update
+```csharp
+  void ChangeTimeScale(float value);
 
-// Pause or resume the timer
-timeManager.PauseUnpauseTimer();
+  void UpdateTimer();
 
-// Update timer every frame
-timeManager.UpdateTimer();
+  void ChangeTimerFunction_CountUp(bool value);
+
+  void ChangeTimerFunction_CountDown(float value, bool value);
+
+  void AdjustTimeLimit(float value);
+
+  void ResetTimer(bool value);
+
+  void PauseUnpauseTimer();
+```
