@@ -37,7 +37,7 @@ This script uses my `Custom Attributes` and the `GameMechanicUtility` script.
 ```
 >**Note:** Attach GravityManipulator to any GameObject to make it a gravity source. Attach GravityBody to any Rigidbody-based object to make it responsive to custom gravity.
 
-### 2. Call necessary functions in Start and FixedUpdate
+### 2. Call the necessary functions in Start and FixedUpdate
 
 ```csharp
 	void Start() {
