@@ -34,7 +34,7 @@ Inherit the Class, alternatively you can attach TimeManager to any GameObject in
 
 ### 2. Call the necessary functions in Update
 ```csharp
-  void ChangeTimeScale(float value);
+  void ChangeTimeScale(float value, float value);
 
   void UpdateTimer();
 

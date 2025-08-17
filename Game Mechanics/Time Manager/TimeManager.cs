@@ -56,8 +56,6 @@ public class TimeManager : MonoBehaviour {
     [Header("Time Scale Properties")]
     [Tooltip("If true, allows time scale changes to be interrupted by new requests.")]
     [SerializeField] bool allowTimeScaleInteruption = false;
-    [Tooltip("The speed at which time scale smoothly interpolates to the new value.")]
-    [SerializeField][MinValue(0)] float smoothTimeScaleSpeed = 0.5f;
 
     [Space(10)][LineDivider(1, LineColors.Gray)]
 
@@ -113,21 +111,23 @@ public class TimeManager : MonoBehaviour {
     /// Smoothly changes the game's time scale to the specified value.
     /// </summary>
     /// <param name="desiredTimeScale">The target time scale value. Values below zero are clamped to zero.</param>
-    protected virtual void ChangeTimeScale(float desiredTimeScale) {
-        if (desiredTimeScale < 0) {
-            desiredTimeScale = 0;
-        }
+    protected virtual void ChangeTimeScale(float desiredTimeScale, float smoothTimeScaleSpeed) {
+		if (desiredTimeScale < 0) {
+			desiredTimeScale = 0;
+		}
 
-        if (allowTimeScaleInteruption) {
-            timeScaleCoroutine = StartCoroutine(LerpTimeScale(desiredTimeScale, smoothTimeScaleSpeed));
-        }
-        else {
-            if (timeScaleCoroutine != null) {
-                StopCoroutine(timeScaleCoroutine);
-            }
-            timeScaleCoroutine = StartCoroutine(LerpTimeScale(desiredTimeScale, smoothTimeScaleSpeed));
-        }
-    }
+		// If a coroutine is already running
+		if (timeScaleCoroutine != null) {
+			if (allowTimeScaleInteruption) {
+				StopCoroutine(timeScaleCoroutine); // interrupt the old one
+			}
+			else {
+				return; // don't start a new one if interruption not allowed
+			}
+		}
+
+		timeScaleCoroutine = StartCoroutine(LerpTimeScale(desiredTimeScale, smoothTimeScaleSpeed));
+	}
 
     /// <summary>
     /// Coroutine that interpolates Time.timeScale smoothly over a given duration.

@@ -27,6 +27,11 @@ public class GravityBody : MonoBehaviour {
     #endregion
 
     #region Script Functions
+	/// <summary>
+	/// Get the list of gravity manipulators
+	/// </summary>
+	public List<GravityManipulator> GravityManipulators => gravityManipulator;
+	
     /// <summary>
 	/// Initializes the gravity-related settings for this object by disabling Unity's built-in gravity.
 	/// 
